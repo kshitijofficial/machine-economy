@@ -22,6 +22,7 @@
     "noEmit": true,
     "moduleDetection": "force",
     "allowArbitraryExtensions": true,
+    "types": ["node"],
     "baseUrl": ".",
     "paths": {
       "@elizaos/core": ["../../core/src"],
