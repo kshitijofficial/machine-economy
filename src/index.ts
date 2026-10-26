@@ -9,6 +9,7 @@ import { evmPlugin } from "@elizaos/plugin-evm";
 import { a2aAgentCardPlugin } from "./a2a-agent-card.ts";
 import { baseSepoliaUsdcBalancePlugin } from "./usdc-balance-plugin.ts";
 import { character } from "./character.ts";
+import { x402BuyerPlugin } from "./x402-buyer-plugin.ts";
 
 type EvmChainSettings = { chains?: { evm?: string[] } };
 
@@ -42,6 +43,7 @@ export const projectAgent: ProjectAgent = {
     baseSepoliaEvmPlugin,
     baseSepoliaUsdcBalancePlugin,
     a2aAgentCardPlugin,
+    x402BuyerPlugin,
   ],
 };
 

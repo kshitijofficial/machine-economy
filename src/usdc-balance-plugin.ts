@@ -47,7 +47,7 @@ const getBaseSepoliaRpcUrl = (runtime: IAgentRuntime): string => {
 
   return url;
 };
-const getWalletAccount = (runtime: IAgentRuntime) => {
+const getWalletAccount = () => {
   const privateKey = process.env.EVM_PRIVATE_KEY;
   if (!privateKey || !/^0x[a-fA-F0-9]{64}$/.test(privateKey)) {
     throw new Error("EVM_PRIVATE_KEY is missing or invalid");
@@ -55,7 +55,7 @@ const getWalletAccount = (runtime: IAgentRuntime) => {
   return privateKeyToAccount(privateKey as Hex);
 };
 
-const getWalletAddress = (runtime: IAgentRuntime) => {
+const getWalletAddress = () => {
   const privateKey = process.env.EVM_PRIVATE_KEY;
   if (!privateKey || !/^0x[a-fA-F0-9]{64}$/.test(privateKey)) {
     throw new Error("EVM_PRIVATE_KEY is missing or invalid");
