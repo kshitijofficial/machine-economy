@@ -55,7 +55,7 @@ const buildPaidImageUrl = (
     return new URL(request.url).toString();
   }
   const path = request.path ?? getX402ImagePath();
-  return new URL(path, `${getSellerAgentUrl}/`).toString();
+  return new URL(path, `${getSellerAgentUrl()}/`).toString();
 };
 
 const createTrustedPayToPolicy = (trustedPayTo: string[]): PaymentPolicy => {
